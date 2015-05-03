@@ -15,9 +15,11 @@ Install requirements with conda, and start app
 
 Configure heroku to use the conda buildpack and add your secret keys:
 
-    $ heroku config:set BUILDPACK_URL=https://github.com/kennethreitz/conda-buildpack.git
-    $ heroku config:set FLASK_SECRET_KEY='an actually secret key'
-    $ heroku config:set BOKEH_SECRET_KEY='another secret key'
+	$heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+
+	$ heroku config:set BUILDPACK_URL=https://github.com/kennethreitz/conda-buildpack.git
+    $ heroku config:set FLASK_SECRET_KEY='\xea\xe7l>uQ\xb0\x87\xd7\x1e\xc1\xd9O|\xc6\xf4\x02\xa2\x0cb6"zo'
+    $ heroku config:set BOKEH_SECRET_KEY='\x95\xf3\xe1.x\x18\xc2\x83\x13\xaf&ZW\x03\x0f\xb7l\xbbZ"\xc4\xcf\xfc\xb3'
 
 To run with redis, add the heroku add on rediscloud (the 25 level is free):
 
