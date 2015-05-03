@@ -13,6 +13,20 @@ Install requirements with conda, and start app
 
 ### To setup on heroku
 
+#Destroy the app:
+heroku apps:destroy --app example
+#Create a new one:
+heroku create example
+#Push to it:
+git push heroku -u master
+
+heroku create <app name>
+git init
+git remote add heroku <my heroku repo>
+git add .
+git commit -a -m "First commit"
+git push heroku master
+
 Configure heroku to use the conda buildpack and add your secret keys:
 
 	$heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
